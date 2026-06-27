@@ -545,6 +545,7 @@ padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     padding: 30px;
+   margin: 0 200px;
 }
 
 
@@ -560,7 +561,6 @@ padding-bottom: 20px;
     padding: 30px;
     width: max-content;
     height: max-content;
-    border: #111111 solid 2px;
     gap: 30px;
 }
 
@@ -639,26 +639,28 @@ padding-bottom: 20px;
     background-image: url(../assets/que-ver/plaza-mayor.jpg);
     height: 600px;
     width: 400px;
-    background-size: 100%;
+    background-size: cover;
+    object-fit:cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 16px;
     position: relative;
-    border: #111111 solid 1px;
+    
+
 }
 
 .categorias-plazas-derecha {
     height: 600px;
     width: 400px;
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 16px;
     position: relative;
-    border: #111111 solid 1px;
     display: flex;
     flex-direction: column;
     justify-content: start;
+    gap: 40px;
 }
 
 
@@ -667,24 +669,56 @@ padding-bottom: 20px;
     background-color: rgba(17, 17, 17, 0.6);
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     padding: 20px;
     position:absolute;
     bottom: 0;
-    border-radius: 0px 0px 16px 16px;
+    border-radius: 0 0 16px 16px;
 }
 
 .categoria-plazas {
-    background-image: url(../assets/que-ver/plaza-mayor.jpg);
-    background-size:contain;
+    background-image: url(../assets/que-ver/plaza-puerta-del-sol.webp);
+    background-size: cover;
     background-repeat: no-repeat;
-    height: 300px;
+    height: 280px;
    border-radius:  16px;
+    background-position: center;
+    position: relative;
+
 }
 
+.categoria-plazas-informacion {
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+   background-size: cover;
+background-color: var(--color-acento);
+      height: 280px;
+      border-radius:  16px;
+      display: flex;
+      padding-left: 50px;
 
+}
 
+.card-texto-sabias-que h3{
+color: var(--color-principal);
+font-size: 32px;
+font-weight: bold;
+}
+
+.card-texto-sabias-que p{
+color: var(--color-texto-principal);
+font-size: 16px;
+width: 300px;
+}
+
+.card-texto-sabias-que {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+}
 
 
 
@@ -693,8 +727,8 @@ padding-bottom: 20px;
 .seccion-museos{
     display: flex;
     flex-direction: column;
-    margin: 100px 200px;
-    justify-content: center;
+    margin-left: 250px;
+    margin-top: 100px;
    
 }
 
@@ -710,15 +744,15 @@ display: flex;
 justify-content: space-between;
 align-items: flex-end;
 gap: 20px;
-margin: 0px 200px;
 height: 400px;
-width: 700px;
+width: 800px;
+
 
 }
 
 .container-museos div{
-width: 200px;
-height: 400px;
+width: 300px;
+height: 450px;
 display: flex;
 flex-direction: column;
 
@@ -732,14 +766,19 @@ flex-direction: column;
 }
 
 .container-museos-informacion img {
-height:200px;
-border-radius: 16px;
+height: 200px;
+width: 280px;
 padding-bottom: 20px;
+border-radius: 16px;
 }
 .container-museos-informacion p {
     padding-top: 5px;
 }
 
-.imagen-museo {
-    border-radius: 16px;
+
+
+.informacion-extra {
+    font-weight:200;
 }
+
+
