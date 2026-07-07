@@ -86,7 +86,7 @@ body {
 .divider {
     width: 100%;
     height: 0.1px;
-   background-color: var(--color-texto-principal);
+    background-color: var(--color-texto-principal);
     border: none;
 }
 
@@ -99,7 +99,7 @@ body {
 .seccion-footer {
     display: flex;
     flex-direction: column;
-    padding: 60px 0px;
+    padding: 20px 0px;
     background-color: #1E1E1E;
     margin-top: 80px;
     gap: 30px;
@@ -153,8 +153,6 @@ body {
     display: flex;
     gap: 0px 100px;
     justify-content: center;
-    padding: 20px 0px;
-
 }
 
 .footer-list a {
@@ -193,7 +191,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.8); 
+    background: rgba(0, 0, 0, 0.8);
     z-index: 1;
 }
 
@@ -289,7 +287,6 @@ span {
 }
 
 .texto-principal-detacadas p {
-    letter-spacing: 5%;
     color: var(--color-principal);
     font-size: 20px;
 
@@ -356,7 +353,6 @@ span {
     height: 290px;
     border-radius: 16px;
     background-size: 180%;
-    background-position: start;
     background-repeat: no-repeat;
     position: relative;
 }
@@ -393,7 +389,6 @@ span {
 
 
 .texto-izquierda p {
-    letter-spacing: 5%;
     color: var(--color-principal);
     font-size: 20px;
 
@@ -582,6 +577,7 @@ span {
     font-size: 20px;
     color: #EDEEEF;
 }
+
 .lista-secciones-que-ver a:hover {
     text-decoration: underline;
 }
@@ -1284,8 +1280,8 @@ span {
     color: var(--color-texto-principal);
 }
 
-.preguntas-frecuentes-link:hover{
-     transform: scale(1.02);
+.preguntas-frecuentes-link:hover {
+    transform: scale(1.02);
     cursor: pointer;
 }
 
@@ -1323,21 +1319,21 @@ span {
     align-items: center;
     gap: 40px;
     padding-top: 100px;
-width: max-content;
-margin: 0 auto;
+    width: max-content;
+    margin: 0 auto;
 }
 
 .seccion-gracias-formulario i {
     color: var(--color-principal);
-font-size: 80px;
+    font-size: 80px;
 }
 
 .texto-gracias-formulario {
     display: flex;
     justify-content: center;
-flex-direction: column;
-align-items: center;
-gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 
@@ -1348,23 +1344,23 @@ gap: 10px;
 }
 
 .texto-gracias-formulario p {
-width: 50%;
-text-align: center;
+    width: 50%;
+    text-align: center;
 }
 
 
-.seccion-gracias-formulario button {
+.seccion-gracias-formulario a {
     background-color: var(--color-principal);
     padding: 10px 20px;
     border: none;
     border-radius: 16px;
     color: var(--color-texto-principal);
-      transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 
 
-.seccion-gracias-formulario button:hover {
+.seccion-gracias-formulario a:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
