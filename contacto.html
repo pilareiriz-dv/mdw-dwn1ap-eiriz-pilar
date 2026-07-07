@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
 
     <title>Inicio</title>
 </head>
@@ -20,7 +23,7 @@
         </div>
         <nav class="nav">
             <ul>
-                <li class="nav_lista">
+                <li>
                     <a href="./index.html">Inicio</a>
                 </li>
                 <li>
@@ -35,9 +38,145 @@
             </ul>
         </nav>
         <div class="div-icono-buscador">
-            <i class="fa-solid fa-magnifying-glass"s></i>
+            <i class="fa-solid fa-magnifying-glass" s></i>
         </div>
     </header>
+    <section class="principal-contacto">
+        <h2>Contacto</h2>
+        <p>Estamos aquí para ayudarte a descubrir Madrid</p>
+    </section>
+    <section class="seccion-contacto">
+        <div class="formulario">
+            <div class="texto-principal-formulario-contacto">
+                <h3>Envíenos un mensaje</h3>
+            </div>
+            <form class="formulario-contacto" action="./gracias.html">
+                <div class="datos-personales-formulario">
+                    <div class="nombre-formulario">
+                        <label for="nombre">Nombre completo*</label>
+                        <input placeholder="Tu nombre..." required type="text" id="nombre" name="nombre">
+                    </div>
+                    <div class="mail-formulario">
+                        <label for="mail">Correo electrónico*</label>
+                        <input placeholder="ejemplo@gmail.com" required type="email" id="mail" name="mail">
+                    </div>
+                </div>
+                <div class="asunto-formulario">
+                    <label for="asunto">Asunto</label>
+                    <select class="asunto-opciones" name="asunto" id="asunto">
+                        <option selected value="general">Información general</option>
+                        <option value="consultas">Consulta</option>
+                        <option value="soporte">Soporte</option>
+                    </select>
+                </div>
+                <div class="mensaje-formulario">
+                    <label for="mensaje">Mensaje*</label>
+                    <textarea required name="mensaje" id="mensaje" placeholder="¿En qué podemos ayudarte?"></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <div class="secciones-izquierda-contacto">
+            <div class="seccion-encuentranos">
+                <div class="titulo-encuentranos">
+                    <h3>Encuentranos</h3>
+                </div>
+                <div class="informacion-encuentranos">
+                    <div class="item-informacion-encuentranos">
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <p>Centro de Turismo Plaza Mayor</p>
+                            <p class="info-extra-encuentranos">Plaza Mayor,27,28012</p>
+                            <p class="info-extra-encuentranos">Madrid, España</p>
+                        </div>
+
+                    </div>
+                    <div class="item-informacion-encuentranos">
+                        <div>
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <p>Teléfono</p>
+                            <p class="info-extra-encuentranos">+34 915 787 810</p>
+                        </div>
+
+                    </div>
+                    <div class="item-informacion-encuentranos">
+                        <div>
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <div>
+                            <p>Horario</p>
+                            <p class="info-extra-encuentranos">Todos los días: 09:30 - 20:30 </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div id="preguntas-frecuentes-seccion">
+                <h3>Preguntas Frecuentes</h3>
+                <p>Encuentra preguntas rápidas sobre transporte, museos y eventos locales.</p>
+                <div class="preguntas-frecuentes-link">
+                    <a href="">Ver FAQs</a>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="seccion-ubicacion">
+        <h2>Ubicación</h2>
+        <div class="seccion-mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1518.8527287046709!2d-3.7084760932755723!3d40.41537539283012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287ed014d919%3A0x8865e850b6ea1a59!2sCentro%20de%20Turismo%20Plaza%20Mayor!5e0!3m2!1ses!2sar!4v1782949585275!5m2!1ses!2sar"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+
+    </section>
+    <footer>
+        <section class="seccion-footer">
+            <div class="seccion-footer-row">
+                <div class="texto_footer">
+                    <p><strong>MADRID</strong></p>
+                    <p class="parrafo_footer">El portal oficial de turismo de la ciudad de madrid</p>
+                </div>
+
+                <div class="section_footer_datos">
+                    <figure class="imagen_footer">
+                        <img src="./assets/imagen_perfil.jpeg" alt="Imagen perfil Pilar Eiriz">
+                    </figure>
+                    <div class="datos_footer">
+                        <p>Nombre completo: Pilar Eiriz</p>
+                        <p>Fecha de nacimiento: 3/11/2000</p>
+                        <p>Mail: pilar.eiriz@davinci.edu.ar</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider" />
+
+            <ul class="footer-list">
+                <li>
+                    <a href="./index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="./quever.html">Que ver</a>
+                </li>
+                <li>
+                    <a href="./gastronomia.html">Gastronomía</a>
+                </li>
+                <li>
+                    <a href="./contacto.html">Contacto</a>
+                </li>
+            </ul>
+
+        </section>
+
+    </footer>
 
 </body>
 

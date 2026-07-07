@@ -11,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
     <title>Inicio</title>
 </head>
 
@@ -22,7 +22,7 @@
         </div>
         <nav class="nav">
             <ul>
-                <li class="nav_lista">
+                <li>
                     <a href="./index.html">Inicio</a>
                 </li>
                 <li>
@@ -41,9 +41,12 @@
         </div>
     </header>
     <section class="seccion-principal-inicio">
-        <h1>Vive <span>Madrid</span></h1>
-        <p> Calles con historia, sabores únicos y una energía incomparable. Madrid te espera.</p>
-        <div class="contenedor-input-buscador">
+        <video class="video-fondo" autoplay muted loop playsinline>
+            <source src="./assets/home/video-principal-madrid.mp4" type="video/mp4">
+        </video>
+        <h1 class="fade-in-box">Vive <span>Madrid</span></h1>
+        <p class="fade-in-box"> Calles con historia, sabores únicos y una energía incomparable. Madrid te espera.</p>
+        <div class="contenedor-input-buscador fade-in-box">
             <div class="div-icono-buscador">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
@@ -155,22 +158,22 @@
                     <p><strong>MADRID</strong></p>
                     <p class="parrafo_footer">El portal oficial de turismo de la ciudad de madrid</p>
                 </div>
-                
-                    <div class="section_footer_datos">
-                        <figure class="imagen_footer">
-                            <img src="./assets/imagen_perfil.jpeg" alt="Imagen perfil Pilar Eiriz">
-                        </figure>
-                        <div class="datos_footer">
-                            <p>Nombre completo: Pilar Eiriz</p>
-                            <p>Fecha de nacimiento: 3/11/2000</p>
-                            <p>Mail: pilar.eiriz@davinci.edu.ar</p>
-                        </div>
+
+                <div class="section_footer_datos">
+                    <figure class="imagen_footer">
+                        <img src="./assets/imagen_perfil.jpeg" alt="Imagen perfil Pilar Eiriz">
+                    </figure>
+                    <div class="datos_footer">
+                        <p>Nombre completo: Pilar Eiriz</p>
+                        <p>Fecha de nacimiento: 3/11/2000</p>
+                        <p>Mail: pilar.eiriz@davinci.edu.ar</p>
                     </div>
                 </div>
+            </div>
 
             <div class="divider" />
-            
-                 <ul class="footer-list">
+
+            <ul class="footer-list">
                 <li>
                     <a href="./index.html">Inicio</a>
                 </li>
@@ -184,7 +187,7 @@
                     <a href="./contacto.html">Contacto</a>
                 </li>
             </ul>
-            
+
         </section>
 
     </footer>
