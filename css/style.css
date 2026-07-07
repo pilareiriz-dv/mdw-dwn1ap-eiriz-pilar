@@ -585,16 +585,13 @@ span {
 
 
 
-
-/* Monumentos reales */
-
 .texto-principal-seccion h2 {
     font-size: 2rem;
     font-weight: bold;
     padding: 20px 0px 20px 0px
 }
 
-.seccion-monumentos-reales {
+.seccion-doble-reales {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -603,12 +600,12 @@ span {
 }
 
 
-.texto-principal-monumentos {
+.texto-principal-doble {
     text-align: start;
     margin-bottom: 30px;
 }
 
-.seccion-cards-monumentos {
+.seccion-cards-doble {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -617,7 +614,7 @@ span {
     gap: 30px;
 }
 
-.card-monumento {
+.card-doble {
     width: 400px;
     height: 450px;
     border-radius: 1rem;
@@ -626,7 +623,7 @@ span {
 
 }
 
-.card-monumento img {
+.card-doble img {
     width: 400px;
     height: 250px;
     border-radius: 16px 16px 0px 0px;
@@ -644,21 +641,19 @@ span {
 
 
 
-.dato-monumento {
+.dato-doble {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.dato-monumento i {
+.dato-doble i {
     font-size: 32px;
     color: var(--color-acento);
 }
 
 
 
-
-/* Que ver: Plazas */
 
 .seccion-plazas {
     display: flex;
@@ -776,9 +771,8 @@ span {
 
 
 
-/*Museos*/
 
-.seccion-museos {
+.seccion-triple {
     display: flex;
     flex-direction: column;
     width: max-content;
@@ -787,14 +781,14 @@ span {
 }
 
 
-.container-museos {
+.container-triple {
     display: flex;
     justify-content: space-between;
     gap: 20px;
 
 }
 
-.container-museos div {
+.container-triple div {
     height: 450px;
     display: flex;
     flex-direction: column;
@@ -803,19 +797,19 @@ span {
 
 }
 
-.container-museos-informacion h3 {
+.container-triple-informacion h3 {
     color: var(--color-principal);
     font-size: 20px;
     font-family: "Montserrat", sans-serif;
 }
 
-.container-museos-informacion img {
+.container-triple-informacion img {
     height: 200px;
     width: 280px;
     padding-bottom: 20px;
 }
 
-.container-museos-informacion p {
+.container-triple-informacion p {
     padding-top: 5px;
 }
 
