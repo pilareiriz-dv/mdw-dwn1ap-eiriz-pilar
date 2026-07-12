@@ -70,6 +70,20 @@ body {
     justify-content: space-between;
     gap: 50px;
     width: 100%;
+    max-width: 1200px;
+
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+.menu-btn i {
+    font-size: 24px;
+    display: none;
 
 }
 
@@ -1357,4 +1371,369 @@ span {
 .seccion-gracias-formulario a:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+/* Preguntas frecuentes */
+.introduccion-preguntas-frecuentes {
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 80px;
+}
+
+.introduccion-preguntas-frecuentes h2 {
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+.introduccion-preguntas-frecuentes p {
+    width: 80%;
+    text-align: center;
+}
+
+
+
+.buscador-preguntas-frecuentes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    width: 50%;
+    height: 50px;
+    padding: 20px;
+}
+
+.buscador-preguntas-frecuentes input {
+    width: 350px;
+    border: none;
+    padding: 10px;
+}
+
+.buscador-preguntas-frecuentes button {
+    background-color: var(--color-principal);
+    color: var(--color-texto-principal);
+    padding: 5px 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buscador-preguntas-frecuentes button:hover {
+    transform: scale(1.1);
+}
+
+
+.cards-preguntas-frecuentes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.card-individual-preguntas-frecuentes {
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card-individual-preguntas-frecuentes:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.card-individual-preguntas-frecuentes i {
+    font-size: 2rem;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.card-individual-preguntas-frecuentes h3 {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.seccion-preguntas-frecuentes {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 80px auto;
+    align-content: flex-start;
+    gap: 50px;
+}
+
+.preguntas-frecuentes-titulo {
+    display: flex;
+    gap: 20px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.preguntas-frecuentes li {
+    border-radius: 16px;
+    border: rgba(0, 0, 0, 0.08) solid 1px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.preguntas-frecuentes ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.preguntas-frecuentes p,
+.preguntas-frecuentes h5 {
+    font-size: 1rem;
+}
+
+.preguntas-frecuentes p {
+    color: rgba(0, 0, 0, 0.50);
+}
+
+.seccion-dudas {
+    background-color: var(--color-principal);
+    color: var(--color-texto-principal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 16px;
+}
+
+.cards-seccion-dudas {
+    display: flex;
+    gap: 20px;
+
+}
+
+.cards-seccion-dudas div {
+    width: 180px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #CC3041;
+    border-radius: 16px;
+}
+
+.cards-seccion-dudas i {
+    color: var(--color-texto-principal);
+    font-size: 24px;
+}
+
+.cards-seccion-dudas div:hover {
+    background-color: var(--color-texto-principal);
+    cursor: pointer;
+}
+
+.cards-seccion-dudas div:hover i,
+.cards-seccion-dudas div:hover p {
+    color: var(--color-principal);
+}
+
+
+@media (max-width:768px) {
+
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /*Navbar*/
+    .menu-btn i {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+
+    /*Footer*/
+
+    .seccion-footer {
+        flex-direction: column;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .seccion-footer-row {
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px;
+    }
+
+    .section_footer_datos img {
+        width: 140px;
+    }
+
+    .footer-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .seccion-categorias-destacadas,
+    .seccion-proximos-eventos,
+    .seccion-doble-reales,
+    .seccion-plazas,
+    .seccion-triple,
+    .seccion-esenciales,
+    .seccion-donde-comer {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        align-items: stretch;
+        overflow-x: clip;
+    }
+.seccion-categorias-destacadas {
+    gap: 0px;
+}
+    
+    
+
+
+    .seccion-principal-inicio p {
+        font-size: 1rem;
+        width: 100%;
+        max-width: 300px;
+
+    }
+
+     .contenedor-input-buscador {
+        width: calc(100% - 40px);
+        max-width: 360px;
+    }
+
+
+    .seccion-principal-input input {
+        width: 140px;
+        padding: 0px;
+    }
+
+
+
+    .texto-principal-detacadas h2 {
+        font-size: 24px;
+    }
+
+    .texto-principal-detacadas {
+        padding-left: 40px;
+    }
+
+    .cards-caterogias-destacadas {
+        flex-direction: column;
+        height: max-content;
+        align-items: flex-start;
+        margin: 50px;
+    }
+
+    .categorias-izquierda {
+        align-items: flex-start;
+        width: 300px;
+        background-size: cover;
+        margin: 0px;
+        height: 300px;
+    }
+
+
+    .categoria-gastronomia,
+    .categoria-contacto {
+        width: 300px;
+    }
+
+    .seccion-proximos-eventos {
+        width: 100%;
+        gap: 50px;
+
+    }
+
+    .texto-principal-eventos {
+        width: 100%;
+        gap: 0;
+        display: flex;
+        flex-direction: column;
+        padding-left: 40px;
+    }
+
+
+    .seccion-cards-proximos-eventos {
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: flex-start;
+        align-self: stretch;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 16px;
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 0 20px 16px;
+        margin: 0;
+        scroll-padding-inline: 20px;
+
+    }
+
+    .card-evento {
+        min-width: 310px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+
+
+    .seccion-newsletter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 90%;
+        padding: 30px 0px;
+    }
+
+    .newsletter-icono {
+        order: -1;
+    }
+
+    .seccion-principal-newsletter h2 {
+        font-size: 2rem;
+    }
+
+
+    .seccion-input {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .seccion-input button {
+        width: 150px;
+
+    }
+
+
 }
