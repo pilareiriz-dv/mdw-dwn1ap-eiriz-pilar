@@ -18,7 +18,12 @@
 <body>
     <header class="header">
         <div id="logo">
-            <p><strong>MADRID</strong></p>
+            <a href="index.html">
+                <p><strong>MADRID</strong></p>
+            </a>
+        </div>
+        <div class="div-menu-btn">
+            <button class="menu-btn"><i class="fa-solid fa-bars"></i></button>
         </div>
         <nav class="nav">
             <ul>
@@ -36,9 +41,18 @@
                 </li>
             </ul>
         </nav>
-        <div class="div-icono-buscador">
-            <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="iconos-navbar">
+            <div class="div-icono-preguntas">
+                <a href="./preguntasfrecuentes.html">
+                    <i class="fa-solid fa-question"></i>
+                </a>
+            </div>
+            <div class="div-icono-buscador">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
         </div>
+
     </header>
     <section class="introduccion-preguntas-frecuentes">
         <h2>¿En qué podemos ayudarte?</h2>
@@ -49,7 +63,7 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="input-preguntas-frecuentes">
-                <input type="text" placeholder="Buscar por abono, museos gratis, emergencias...">
+                <input type="text" placeholder="Buscá tu duda">
             </div>
             <div>
                 <button>
@@ -60,41 +74,46 @@
         </div>
     </section>
     <section class="cards-preguntas-frecuentes">
-        <div class="card-individual-preguntas-frecuentes">
+
+        <a href="#tours" class="card-individual-preguntas-frecuentes">
             <div>
                 <i class="fa-solid fa-route"></i>
             </div>
             <div>
                 <h3>Tours</h3>
             </div>
-        </div>
-        <div class="card-individual-preguntas-frecuentes">
+        </a>
+
+        <a href="#gastronomia" class="card-individual-preguntas-frecuentes">
             <div>
                 <i class="fa-solid fa-utensils"></i>
             </div>
             <div>
                 <h3>Gastronomía</h3>
             </div>
-        </div>
-        <div class="card-individual-preguntas-frecuentes">
+        </a>
+
+        <a href="#eventos" class="card-individual-preguntas-frecuentes">
             <div>
                 <i class="fa-solid fa-calendar-days"></i>
             </div>
             <div>
                 <h3>Eventos</h3>
             </div>
-        </div>
-        <div class="card-individual-preguntas-frecuentes">
+        </a>
+
+        <a href="#transporte" class="card-individual-preguntas-frecuentes">
             <div>
                 <i class="fa-solid fa-bus"></i>
             </div>
             <div>
                 <h3>Transporte</h3>
             </div>
-        </div>
+        </a>
+
     </section>
     <section class="seccion-preguntas-frecuentes">
-        <div class="preguntas-frecuentes">
+        <div class="preguntas-frecuentes" id="tours">
             <div class="preguntas-frecuentes-titulo">
                 <i class="fa-solid fa-route"></i>
                 <h4>Tours y experiencias</h4>
@@ -119,7 +138,7 @@
                 </li>
             </ul>
         </div>
-        <div class="preguntas-frecuentes">
+        <div class="preguntas-frecuentes" id="gastronomia">
             <div class="preguntas-frecuentes-titulo">
                 <i class="fa-solid fa-utensils"></i>
                 <h4>Gastronomía</h4>
@@ -143,7 +162,7 @@
                 </li>
             </ul>
         </div>
-        <div class="preguntas-frecuentes">
+        <div class="preguntas-frecuentes" id="eventos">
             <div class="preguntas-frecuentes-titulo">
                 <i class="fa-solid fa-calendar-days"></i>
                 <h4>Eventos</h4>
@@ -168,7 +187,7 @@
                 </li>
             </ul>
         </div>
-        <div class="preguntas-frecuentes">
+        <div class="preguntas-frecuentes" id="transporte">
             <div class="preguntas-frecuentes-titulo">
                 <i class="fa-solid fa-bus"></i>
                 <h4>Transporte y movilidad</h4>

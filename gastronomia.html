@@ -19,7 +19,12 @@
 <body>
     <header class="header">
         <div id="logo">
-            <p><strong>MADRID</strong></p>
+            <a href="index.html">
+                <p><strong>MADRID</strong></p>
+            </a>
+        </div>
+        <div class="div-menu-btn">
+            <button class="menu-btn"><i class="fa-solid fa-bars"></i></button>
         </div>
         <nav class="nav">
             <ul>
@@ -37,9 +42,18 @@
                 </li>
             </ul>
         </nav>
-        <div class="div-icono-buscador">
-            <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="iconos-navbar">
+            <div class="div-icono-preguntas">
+                <a href="./preguntasfrecuentes.html">
+                    <i class="fa-solid fa-question"></i>
+                </a>
+            </div>
+            <div class="div-icono-buscador">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
         </div>
+
     </header>
     <section class="seccion_principal_gastronomia">
         <h2>Sabores de <span>Madrid</span></h2>
@@ -129,9 +143,10 @@
             <h2>Planifica tu ruta de tapas</h2>
             <p>Descarga nuestra guía exclusiva con los 50 mejores rincones para comer como un auténtico madrileño.</p>
             <div class="planifica-ruta-boton">
-                <button class="planifica-ruta-boton">
-                    <i class="fa-solid fa-download"></i>Descargar guía (PDF)
-                </button>
+                <a href="pdf/guia-madrid.pdf" download class="planifica-ruta-boton">
+                    <i class="fa-solid fa-download"></i>
+                    Descargar guía (PDF)
+                </a>
 
             </div>
 

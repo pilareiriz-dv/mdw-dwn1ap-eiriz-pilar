@@ -41,7 +41,7 @@ body {
 
 .header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     padding: 30px 20px;
 }
@@ -52,6 +52,21 @@ body {
     color: var(--color-principal);
     font-size: 30px;
     user-select: none;
+}
+
+.iconos-navbar {
+    display: flex;
+    gap: 30px;
+}
+
+.div-icono-preguntas i{
+ font-size: 30px;
+ transition: transform 0.3s ease;
+}
+
+.div-icono-preguntas i:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 .div-icono-buscador i {
@@ -1446,6 +1461,8 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    color: inherit;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1585,6 +1602,7 @@ span {
         flex-direction: column;
         gap: 20px;
         padding: 40px;
+        width: 100%;
     }
 
     .section_footer_datos img {
@@ -1680,7 +1698,7 @@ span {
     }
 
 
-    .seccion-cards-proximos-eventos, .seccion-cards-doble, .container-triple{
+    .seccion-cards-proximos-eventos, .seccion-cards-doble, .container-triple, .cards-donde-comer{
         flex-wrap: nowrap;
         align-items: stretch;
         justify-content: flex-start;
@@ -1817,6 +1835,208 @@ padding: 10px 0px;
 .card-texto-sabias-que p{
     width: 90%;
 }
+
+
+
+/*Gastronomia*/
+.seccion_principal_gastronomia {
+    background-size: cover;
+    background-position: center;
+    margin: 0px;
+    padding-left: 20px;
+    width: 100%;
+
+}
+
+.seccion-esenciales {
+    align-items: center;
+    width: 100%;
+    padding-bottom: 120px;
+    
+}
+
+.seccion_principal_gastronomia h2 {
+font-size: 40px;
+}
+
+.seccion_principal_gastronomia span {
+font-size: 40px;
+}
+
+.seccion_principal_gastronomia p {
+width: 300px;
+}
+
+.cards-esenciales {
+flex-direction: column;
+width: 100%;
+align-items: center;
+gap: 20px;
+height: 900px;
+}
+
+.cards-esenciales div{
+width: 90%;
+height: 600px;
+}
+.esenciales-izquierda div{
+    height: 300px;
+    
+}
+
+.esenciales-izquierda {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.esenciales-derecha {
+    align-items: center;
+}
+
+
+.planifica-ruta {
+    background-size: cover;
+    background-position: center;
+}
+
+.seccion-texto-planifica-ruta {
+    width: 80%;
+}
+.seccion-texto-planifica-ruta h2{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.seccion-texto-planifica-ruta p{
+  width: 90%;
+}
+
+
+/* Principal contacto */
+.principal-contacto, .seccion-contacto, .seccion-ubicacion {
+    width: 100%;
+    min-width: 0;
+}
+
+.principal-contacto {
+    background-size: cover;
+}
+
+.principal-contacto p{
+    text-align: center;
+}
+
+.principal-contacto h2{
+    font-size: 40px;
+}
+.seccion-contacto {
+    flex-direction: column;
+    width: 90%;
+    min-width: 0;
+}
+
+.datos-personales-formulario {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.datos-personales-formulario input{
+    width: 250px;
+}
+
+
+.asunto-formulario select {
+    width: 250px;
+}
+
+.mensaje-formulario textarea {
+    width: 250px;
+    height: 200px;
+}
+
+.seccion-encuentranos, #preguntas-frecuentes-seccion {
+    width: 100%;
+}
+
+.secciones-izquierda-contacto {
+    gap: 40px;
+}
+
+.seccion-ubicacion {
+    margin-top: 30px;
+    padding-left: 20px;
+}
+
+.seccion-mapa{
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion-gracias-formulario {
+    width: 100%;
+}
+
+.texto-gracias-formulario h2{
+text-align: center;
+width: 100%;
+}
+
+.texto-gracias-formulario p{
+width: 80%;
+}
+
+.introduccion-preguntas-frecuentes {
+width: 100%;
+min-width: 0;
+}
+
+
+/*Preguntas frecuentes */
+
+.introduccion-preguntas-frecuentes h2 {
+    text-align: center;
+}
+
+.buscador-preguntas-frecuentes {
+    width: 80%;
+}
+
+.input-preguntas-frecuentes input{
+width: 100%;
+min-width: 0;
+}
+.cards-preguntas-frecuentes {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .card-individual-preguntas-frecuentes {
+        width: 45%;
+    }
+
+
+    .seccion-preguntas-frecuentes {
+        width: 90%;
+        min-width: 0;
+    }
+
+    .seccion-dudas {
+        height: 100%;
+        padding: 40px;
+    }
+
+    .seccion-dudas p{
+width: 100%;
+text-align: center;
+    }
+
+    .cards-seccion-dudas {
+        flex-direction: column;
+    }
 
 
 }
