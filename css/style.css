@@ -1680,7 +1680,7 @@ span {
     }
 
 
-    .seccion-cards-proximos-eventos {
+    .seccion-cards-proximos-eventos, .seccion-cards-doble, .container-triple{
         flex-wrap: nowrap;
         align-items: stretch;
         justify-content: flex-start;
@@ -1734,6 +1734,89 @@ span {
         width: 150px;
 
     }
+
+
+/* Que ver */
+
+.seccion-principal-que-ver {
+    background-size: cover;
+    width: 100%;
+    min-width: 0;
+}
+
+.seccion-principal-que-ver h1{
+    padding-left: 20px;
+    font-size: 40px;
+}
+.seccion-principal-que-ver span {
+    font-size: 40px;
+}
+
+.seccion-principal-que-ver p{
+    padding-left: 20px;
+width: 380px;
+}
+
+.nav-secciones-que-ver {
+    height: max-content;
+    width: 100%;
+    
+}
+
+.lista-secciones-que-ver {
+flex-direction: column;
+gap: 10px;
+padding: 10px 0px;
+}
+
+.texto-principal-seccion h2 {
+    padding-left: 20px;
+}
+
+.card-doble {
+    width: 100%;
+   height: 480px;
+   gap: 10px;
+}
+
+.card-doble img {
+    width: 280px;
+    height: 200px;
+}
+
+ .cards-plazas {
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+   padding: 0;
+   width: 90%;
+    }
+
+   .categorias-plazas-izquierda {
+        width: 80%;
+        background-size: cover;
+        margin: 0px;
+        height: 400px;
+        align-items: center;
+    }
+
+.categorias-plazas, .categoria-plazas-informacion{
+        width: 100%;
+        height: 400px;
+        padding-left:20px ;
+        align-items: center;
+    }
+
+.categorias-plazas-derecha {
+    width: 80%;
+    height: 800%;
+}
+
+.card-texto-sabias-que p{
+    width: 90%;
+}
 
 
 }
