@@ -107,8 +107,8 @@ body {
 }
 
 .menu-btn {
-  display: none;
-  cursor: pointer;
+    display: none;
+    cursor: pointer;
 }
 
 .menu-btn i {
@@ -184,7 +184,8 @@ body {
     width: 200px;
 }
 
-.datos_footer, .datos_footer a {
+.datos_footer,
+.datos_footer a {
     color: var(--color-texto-principal);
     display: flex;
     flex-direction: column;
@@ -580,7 +581,7 @@ span {
     font-size: 52px;
     font-weight: bold;
     color: var(--color-texto-principal);
-    
+
 
 }
 
@@ -1965,8 +1966,8 @@ span {
         object-fit: cover;
     }
 
-    .container-triple > div,
-    .cards-donde-comer > div {
+    .container-triple>div,
+    .cards-donde-comer>div {
         width: 100%;
         min-width: 100%;
         max-width: 100%;
@@ -2196,10 +2197,10 @@ span {
         margin: 0 auto;
     }
 
-    .seccion-texto-donde-comer{
-    text-align: center;
-    
-}
+    .seccion-texto-donde-comer {
+        text-align: center;
+
+    }
 
     .cards-esenciales {
         flex-direction: column;
@@ -2426,11 +2427,11 @@ span {
         width: 100%;
         max-width: 360px;
         box-sizing: border-box;
-         margin: 0 auto;
+        margin: 0 auto;
     }
 
     .card-individual-preguntas-frecuentes {
-        width: 100%;  
+        width: 100%;
     }
 
     .seccion-preguntas-frecuentes {
