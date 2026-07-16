@@ -184,7 +184,7 @@ body {
     width: 200px;
 }
 
-.datos_footer {
+.datos_footer, .datos_footer a {
     color: var(--color-texto-principal);
     display: flex;
     flex-direction: column;
@@ -2426,10 +2426,11 @@ span {
         width: 100%;
         max-width: 360px;
         box-sizing: border-box;
+         margin: 0 auto;
     }
 
     .card-individual-preguntas-frecuentes {
-        width: 100%;
+        width: 100%;  
     }
 
     .seccion-preguntas-frecuentes {
