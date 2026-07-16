@@ -17,16 +17,42 @@
 </head>
 
 <body>
-    <header class="header">
-        <div id="logo">
-            <a href="index.html">
-                <p><strong>MADRID</strong></p>
-            </a>
+        <header class="header">
+        <div class="header-bar">
+            <div id="logo">
+                <a href="index.html">
+                    <p><strong>MADRID</strong></p>
+                </a>
+            </div>
+            <div class="div-menu-btn">
+                <button class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <nav class="nav">
+                <ul class="menu">
+                    <li>
+                        <a href="./index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="./quever.html">Qué ver</a>
+                    </li>
+                    <li>
+                        <a href="./gastronomia.html">Gastronomía</a>
+                    </li>
+                    <li>
+                        <a href="./contacto.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="./preguntasfrecuentes.html">Faqs</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="iconos-navbar">
+                <div class="div-icono-buscador">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
         </div>
-        <div class="div-menu-btn">
-            <button class="menu-btn"><i class="fa-solid fa-bars"></i></button>
-        </div>
-        <nav class="nav">
+        <div class="menu-mobile">
             <ul>
                 <li>
                     <a href="./index.html">Inicio</a>
@@ -40,20 +66,11 @@
                 <li>
                     <a href="./contacto.html">Contacto</a>
                 </li>
+                <li>
+                    <a href="./preguntasfrecuentes.html">Faqs</a>
+                </li>
             </ul>
-        </nav>
-        <div class="iconos-navbar">
-            <div class="div-icono-preguntas">
-                <a href="./preguntasfrecuentes.html">
-                    <i class="fa-solid fa-question"></i>
-                </a>
-            </div>
-            <div class="div-icono-buscador">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-
         </div>
-
     </header>
     <section class="principal-contacto">
         <h2>Contacto</h2>
@@ -135,7 +152,7 @@
                 <h3>Preguntas Frecuentes</h3>
                 <p>Encuentra preguntas rápidas sobre transporte, museos y eventos locales.</p>
                 <div class="preguntas-frecuentes-link">
-                    <a href="">Ver FAQs</a>
+                    <a href="./preguntasfrecuentes.html">Ver FAQs</a>
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
@@ -182,7 +199,7 @@
             </ul>
         </section>
     </footer>
-
+    <script src="./index.js"></script>
 </body>
 
 </html>

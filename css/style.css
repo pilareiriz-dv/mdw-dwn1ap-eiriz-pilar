@@ -31,19 +31,32 @@
 }
 
 
+html {
+    overflow-x: hidden;
+}
+
 body {
-    max-width: 100vw;
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 
 /* Navbar */
 
 .header {
+    position: relative;
+}
+
+.header-bar {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 30px 20px;
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
 }
 
 
@@ -59,9 +72,9 @@ body {
     gap: 30px;
 }
 
-.div-icono-preguntas i{
- font-size: 30px;
- transition: transform 0.3s ease;
+.div-icono-preguntas i {
+    font-size: 30px;
+    transition: transform 0.3s ease;
 }
 
 .div-icono-preguntas i:hover {
@@ -80,7 +93,7 @@ body {
     cursor: pointer;
 }
 
-.nav ul {
+.menu {
     display: flex;
     justify-content: space-between;
     gap: 50px;
@@ -89,11 +102,13 @@ body {
 
 }
 
-.menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
+.menu-mobile {
+    display: none;
+}
 
+.menu-btn {
+  display: none;
+  cursor: pointer;
 }
 
 .menu-btn i {
@@ -231,6 +246,7 @@ span {
     font-weight: bold;
     color: var(--color-texto-principal);
     z-index: 2;
+
 }
 
 .seccion-principal-inicio p {
@@ -564,6 +580,7 @@ span {
     font-size: 52px;
     font-weight: bold;
     color: var(--color-texto-principal);
+    
 
 }
 
@@ -1581,12 +1598,119 @@ span {
     }
 
     /*Navbar*/
-    .menu-btn i {
-        display: block;
+    .header {
+        position: relative;
+        z-index: 10;
+    }
+
+    .header-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 16px;
+        position: relative;
+        z-index: 2;
+        background-color: #fff;
+        gap: 12px;
+    }
+
+    #logo {
+        flex-shrink: 0;
+    }
+
+    #logo p {
+        font-size: 24px;
+    }
+
+    .iconos-navbar {
+        display: none;
     }
 
     .nav {
+        position: static;
+    }
+
+    .div-menu-btn {
+        flex-shrink: 0;
+        margin-left: auto;
+    }
+
+    .menu-btn i {
+        display: block;
+        color: var(--color-principal);
+        font-size: 22px;
+    }
+
+    .menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        border-radius: 8px;
+        padding: 8px;
+        line-height: 1;
+        min-width: 40px;
+        min-height: 40px;
+        cursor: pointer;
+    }
+
+    .menu {
         display: none;
+    }
+
+    .menu-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 50dvh;
+        padding-top: 24px;
+        background-color: #fff;
+        z-index: 1;
+        transform: translateY(-100%);
+        transition: transform 0.4s ease, visibility 0.4s;
+        pointer-events: none;
+        visibility: hidden;
+    }
+
+    .menu-mobile.active {
+        transform: translateY(0);
+        pointer-events: auto;
+        visibility: visible;
+    }
+
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        padding: 24px 0;
+    }
+
+    .menu-mobile li {
+        text-align: center;
+        padding: 0;
+    }
+
+    .menu-mobile a {
+        color: var(--color-texto-secundario);
+        font-size: 22px;
+        display: inline-block;
+        padding: 8px 16px;
+        cursor: pointer;
+    }
+
+    .nav li {
+        text-align: center;
+        padding: 0;
     }
 
 
@@ -1594,24 +1718,50 @@ span {
 
     .seccion-footer {
         flex-direction: column;
+        align-items: center;
         width: 100%;
         min-width: 0;
+        padding: 40px 16px;
+        box-sizing: border-box;
+        text-align: center;
     }
 
     .seccion-footer-row {
         flex-direction: column;
-        gap: 20px;
-        padding: 40px;
+        align-items: center;
+        gap: 24px;
+        padding: 0;
         width: 100%;
+        max-width: 360px;
+        box-sizing: border-box;
+    }
+
+    .texto_footer {
+        align-items: center;
+    }
+
+    .section_footer_datos {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
     }
 
     .section_footer_datos img {
         width: 140px;
     }
 
+    .datos_footer {
+        align-items: center;
+        text-align: center;
+    }
+
     .footer-list {
         flex-direction: column;
         align-items: center;
+        gap: 12px;
+        width: 100%;
+        max-width: 360px;
+        padding: 0;
     }
 
     .seccion-categorias-destacadas,
@@ -1624,85 +1774,137 @@ span {
         width: 100%;
         max-width: 100%;
         min-width: 0;
-        align-items: stretch;
+        align-items: center;
         overflow-x: clip;
     }
-.seccion-categorias-destacadas {
-    gap: 0px;
-}
-    
-    
 
+    .seccion-categorias-destacadas {
+        gap: 24px;
+        align-items: center;
+        padding: 24px 16px;
+        box-sizing: border-box;
+    }
+
+    .seccion-principal-inicio h1 {
+        font-size: 40px;
+        line-height: 1.2;
+        text-align: center;
+        padding: 0 16px;
+    }
+
+    .seccion-principal-inicio span {
+        font-size: inherit;
+        line-height: inherit;
+    }
 
     .seccion-principal-inicio p {
         font-size: 1rem;
         width: 100%;
         max-width: 300px;
-
+        padding: 0 16px;
+        box-sizing: border-box;
     }
 
-     .contenedor-input-buscador {
-        width: calc(100% - 40px);
+    .contenedor-input-buscador {
+        width: calc(100% - 32px);
         max-width: 360px;
+        gap: 8px;
+        padding: 8px 12px;
+        box-sizing: border-box;
+        min-width: 0;
     }
 
+    .contenedor-input-buscador .div-icono-buscador {
+        flex-shrink: 0;
+    }
 
+    .contenedor-input-buscador .div-icono-buscador i {
+        font-size: 18px;
+    }
+
+    .seccion-principal-input {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .contenedor-input-buscador input,
     .seccion-principal-input input {
-        width: 140px;
-        padding: 0px;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 8px 4px;
+        box-sizing: border-box;
     }
 
+    .contenedor-input-buscador button {
+        flex-shrink: 0;
+        padding: 8px 16px;
+        white-space: nowrap;
+    }
 
+    .texto-principal-detacadas {
+        width: 100%;
+        max-width: 360px;
+        padding-left: 0;
+        align-items: flex-start;
+    }
 
     .texto-principal-detacadas h2 {
         font-size: 24px;
     }
 
-    .texto-principal-detacadas {
-        padding-left: 40px;
-    }
-
     .cards-caterogias-destacadas {
         flex-direction: column;
         height: max-content;
-        align-items: flex-start;
-        margin: 50px;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        width: 100%;
+        max-width: 360px;
+        gap: 16px;
     }
 
     .categorias-izquierda {
-        align-items: flex-start;
-        width: 300px;
+        width: 100%;
         background-size: cover;
-        margin: 0px;
+        margin: 0;
         height: 300px;
     }
 
+    .categorias-derecha {
+        width: 100%;
+        height: auto;
+    }
 
     .categoria-gastronomia,
     .categoria-contacto {
-        width: 300px;
+        width: 100%;
+        height: 220px;
+        background-size: cover;
     }
 
     .seccion-proximos-eventos {
         width: 100%;
-        gap: 50px;
-
+        gap: 24px;
+        align-items: center;
+        padding: 40px 16px;
+        box-sizing: border-box;
     }
 
     .texto-principal-eventos {
         width: 100%;
+        max-width: 360px;
         gap: 0;
         display: flex;
         flex-direction: column;
-        padding-left: 40px;
+        padding-left: 0;
+        box-sizing: border-box;
     }
 
-
-    .seccion-cards-proximos-eventos, .seccion-cards-doble, .container-triple, .cards-donde-comer{
+    .seccion-cards-proximos-eventos {
         flex-wrap: nowrap;
         align-items: stretch;
         justify-content: flex-start;
-        align-self: stretch;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
@@ -1710,18 +1912,83 @@ span {
         gap: 16px;
         height: auto;
         width: 100%;
-        max-width: 100%;
+        max-width: 360px;
         min-width: 0;
-        padding: 0 20px 16px;
+        padding: 0 0 16px;
         margin: 0;
-        scroll-padding-inline: 20px;
+        scroll-padding-inline: 0;
+        box-sizing: border-box;
+    }
 
+    .seccion-cards-doble,
+    .container-triple,
+    .cards-donde-comer {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 16px;
+        height: auto;
+        width: 100%;
+        max-width: 280px;
+        min-width: 0;
+        padding: 0 0 16px;
+        margin: 0;
+        scroll-padding-inline: 0;
+        box-sizing: border-box;
+    }
+
+    .seccion-cards-doble::-webkit-scrollbar,
+    .container-triple::-webkit-scrollbar,
+    .cards-donde-comer::-webkit-scrollbar,
+    .seccion-cards-proximos-eventos::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card-doble {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: auto;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        box-sizing: border-box;
+    }
+
+    .card-doble img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .container-triple > div,
+    .cards-donde-comer > div {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: auto;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        box-sizing: border-box;
     }
 
     .card-evento {
-        min-width: 310px;
+        width: 100%;
+        min-width: 100%;
+        max-width: 360px;
         flex-shrink: 0;
         scroll-snap-align: start;
+        box-sizing: border-box;
+    }
+
+    .card-evento img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
     }
 
 
@@ -1729,313 +1996,471 @@ span {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        width: 90%;
-        padding: 30px 0px;
+        gap: 16px;
+        width: calc(100% - 32px);
+        max-width: 360px;
+        margin: 0 auto;
+        padding: 30px 20px;
+        box-sizing: border-box;
     }
 
     .newsletter-icono {
         order: -1;
     }
 
+    .seccion-principal-newsletter {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
     .seccion-principal-newsletter h2 {
         font-size: 2rem;
     }
 
-
     .seccion-input {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .seccion-input input {
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .seccion-input button {
-        width: 150px;
-
+        width: 100%;
+        max-width: 150px;
     }
 
 
-/* Que ver */
+    /* Que ver */
 
-.seccion-principal-que-ver {
-    background-size: cover;
-    width: 100%;
-    min-width: 0;
-}
+    .seccion-principal-que-ver {
+        background-size: cover;
+        width: 100%;
+        min-width: 0;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 0 16px 40px;
+        box-sizing: border-box;
+    }
 
-.seccion-principal-que-ver h1{
-    padding-left: 20px;
-    font-size: 40px;
-}
-.seccion-principal-que-ver span {
-    font-size: 40px;
-}
+    .seccion-principal-que-ver h1 {
+        padding-left: 0;
+        font-size: 40px;
+        text-align: start;
+        line-height: 1.2;
+        width: 100%;
+        max-width: 360px;
+    }
 
-.seccion-principal-que-ver p{
-    padding-left: 20px;
-width: 380px;
-}
+    .seccion-principal-que-ver span {
+        font-size: inherit;
+    }
 
-.nav-secciones-que-ver {
-    height: max-content;
-    width: 100%;
+    .seccion-principal-que-ver p {
+        padding-left: 0;
+        padding-bottom: 0;
+        width: 100%;
+        max-width: 360px;
+        text-align: start;
+        box-sizing: border-box;
+    }
+
+    .nav-secciones-que-ver {
+        height: max-content;
+        width: 100%;
+    }
+
+    .lista-secciones-que-ver {
+        flex-direction: column;
+        gap: 10px;
+        padding: 16px;
+        align-items: center;
+    }
+
+    .seccion-doble-reales,
+    .seccion-plazas,
+    .seccion-triple {
+        align-items: center;
+        padding: 24px 16px;
+        box-sizing: border-box;
+    }
+
+    .texto-principal-seccion {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .texto-principal-seccion h2 {
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .cards-plazas {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        max-width: 360px;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .categorias-plazas-izquierda {
+        width: 100%;
+        height: 320px;
+        min-height: 320px;
+        background-size: cover;
+        margin: 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .categorias-plazas-derecha {
+        width: 100%;
+        height: auto;
+        gap: 16px;
+        overflow: visible;
+    }
+
+    .card-texto-plazas {
+        width: 100%;
+        left: 0;
+        right: 0;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+
+    .categoria-plazas {
+        width: 100%;
+        height: 280px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .categoria-plazas-informacion {
+        width: 100%;
+        height: auto;
+        min-height: 180px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .card-texto-sabias-que p {
+        width: 100%;
+    }
+
+    .container-triple-informacion img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+
+    /*Gastronomia*/
+    .seccion_principal_gastronomia {
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 40px 16px;
+        width: 100%;
+        box-sizing: border-box;
+        align-items: flex-start;
+        text-align: start;
+    }
+
+    .seccion-esenciales,
+    .seccion-donde-comer {
+        align-items: center;
+        width: 100%;
+        padding: 24px 16px 80px;
+        box-sizing: border-box;
+    }
+
+    .seccion_principal_gastronomia h2 {
+        font-size: 40px;
+        line-height: 1.2;
+        padding: 0;
+    }
+
+    .seccion_principal_gastronomia span {
+        font-size: inherit;
+    }
+
+    .seccion_principal_gastronomia p {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .seccion-texto-donde-comer{
+    text-align: center;
     
 }
 
-.lista-secciones-que-ver {
-flex-direction: column;
-gap: 10px;
-padding: 10px 0px;
-}
-
-.texto-principal-seccion h2 {
-    padding-left: 20px;
-}
-
-.card-doble {
-    width: 100%;
-   height: 480px;
-   gap: 10px;
-}
-
-.card-doble img {
-    width: 280px;
-    height: 200px;
-}
-
- .cards-plazas {
+    .cards-esenciales {
         flex-direction: column;
-        height: 100%;
+        width: 100%;
+        max-width: 380px;
+        align-items: center;
+        gap: 16px;
+        height: auto;
+    }
+
+    .cards-esenciales div {
+        width: 100%;
+        height: auto;
+        min-height: 220px;
+    }
+
+    .esenciales-izquierda div {
+        height: 220px;
+    }
+
+    .esenciales-izquierda {
+        height: auto;
+        width: 100%;
+        display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0;
-   padding: 0;
-   width: 90%;
     }
 
-   .categorias-plazas-izquierda {
-        width: 80%;
-        background-size: cover;
-        margin: 0px;
-        height: 400px;
-        align-items: center;
-    }
-
-.categorias-plazas, .categoria-plazas-informacion{
+    .esenciales-derecha {
         width: 100%;
-        height: 400px;
-        padding-left:20px ;
         align-items: center;
     }
 
-.categorias-plazas-derecha {
-    width: 80%;
-    height: 800%;
-}
-
-.card-texto-sabias-que p{
-    width: 90%;
-}
-
-
-
-/*Gastronomia*/
-.seccion_principal_gastronomia {
-    background-size: cover;
-    background-position: center;
-    margin: 0px;
-    padding-left: 20px;
-    width: 100%;
-
-}
-
-.seccion-esenciales {
-    align-items: center;
-    width: 100%;
-    padding-bottom: 120px;
-    
-}
-
-.seccion_principal_gastronomia h2 {
-font-size: 40px;
-}
-
-.seccion_principal_gastronomia span {
-font-size: 40px;
-}
-
-.seccion_principal_gastronomia p {
-width: 300px;
-}
-
-.cards-esenciales {
-flex-direction: column;
-width: 100%;
-align-items: center;
-gap: 20px;
-height: 900px;
-}
-
-.cards-esenciales div{
-width: 90%;
-height: 600px;
-}
-.esenciales-izquierda div{
-    height: 300px;
-    
-}
-
-.esenciales-izquierda {
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.esenciales-derecha {
-    align-items: center;
-}
-
-
-.planifica-ruta {
-    background-size: cover;
-    background-position: center;
-}
-
-.seccion-texto-planifica-ruta {
-    width: 80%;
-}
-.seccion-texto-planifica-ruta h2{
-    text-align: center;
-    font-size: 2rem;
-}
-
-.seccion-texto-planifica-ruta p{
-  width: 90%;
-}
-
-
-/* Principal contacto */
-.principal-contacto, .seccion-contacto, .seccion-ubicacion {
-    width: 100%;
-    min-width: 0;
-}
-
-.principal-contacto {
-    background-size: cover;
-}
-
-.principal-contacto p{
-    text-align: center;
-}
-
-.principal-contacto h2{
-    font-size: 40px;
-}
-.seccion-contacto {
-    flex-direction: column;
-    width: 90%;
-    min-width: 0;
-}
-
-.datos-personales-formulario {
-    flex-direction: column;
-    gap: 20px;
-}
-
-.datos-personales-formulario input{
-    width: 250px;
-}
-
-
-.asunto-formulario select {
-    width: 250px;
-}
-
-.mensaje-formulario textarea {
-    width: 250px;
-    height: 200px;
-}
-
-.seccion-encuentranos, #preguntas-frecuentes-seccion {
-    width: 100%;
-}
-
-.secciones-izquierda-contacto {
-    gap: 40px;
-}
-
-.seccion-ubicacion {
-    margin-top: 30px;
-    padding-left: 20px;
-}
-
-.seccion-mapa{
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-}
-
-.seccion-gracias-formulario {
-    width: 100%;
-}
-
-.texto-gracias-formulario h2{
-text-align: center;
-width: 100%;
-}
-
-.texto-gracias-formulario p{
-width: 80%;
-}
-
-.introduccion-preguntas-frecuentes {
-width: 100%;
-min-width: 0;
-}
-
-
-/*Preguntas frecuentes */
-
-.introduccion-preguntas-frecuentes h2 {
-    text-align: center;
-}
-
-.buscador-preguntas-frecuentes {
-    width: 80%;
-}
-
-.input-preguntas-frecuentes input{
-width: 100%;
-min-width: 0;
-}
-.cards-preguntas-frecuentes {
+    .planifica-ruta {
+        background-size: cover;
+        background-position: center;
         display: flex;
-        flex-wrap: wrap;
-        padding: 10px;
+        justify-content: center;
+        padding: 40px 16px;
+        box-sizing: border-box;
+    }
+
+    .seccion-texto-planifica-ruta {
+        width: 100%;
+        max-width: 360px;
+        align-items: center;
+    }
+
+    .seccion-texto-planifica-ruta h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .seccion-texto-planifica-ruta p {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* Principal contacto */
+    .principal-contacto,
+    .seccion-contacto,
+    .seccion-ubicacion {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .principal-contacto {
+        background-size: cover;
+        align-items: center;
+        padding: 40px 16px;
+    }
+
+    .principal-contacto p {
+        text-align: center;
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .principal-contacto h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .seccion-contacto {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        padding: 24px 16px;
+        margin: 0 auto;
+    }
+
+    .secciones-izquierda-contacto,
+    .seccion-formulario {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .datos-personales-formulario {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .datos-personales-formulario input,
+    .asunto-formulario select,
+    .mensaje-formulario textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .mensaje-formulario textarea {
+        height: 200px;
+    }
+
+    .seccion-encuentranos,
+    #preguntas-frecuentes-seccion {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 16px;
+        box-sizing: border-box;
+    }
+
+    .secciones-izquierda-contacto {
+        gap: 40px;
+    }
+
+    .seccion-ubicacion {
+        margin-top: 30px;
+        padding: 0 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .seccion-ubicacion h2 {
+        text-align: center;
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .seccion-mapa {
+        width: 100%;
+        max-width: 360px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seccion-mapa iframe,
+    .seccion-mapa img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .seccion-gracias-formulario {
+        width: 100%;
+        padding: 40px 16px;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    .texto-gracias-formulario {
+        width: 100%;
+        max-width: 360px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .texto-gracias-formulario h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .texto-gracias-formulario p {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+    /*Preguntas frecuentes */
+
+    .introduccion-preguntas-frecuentes {
+        width: 100%;
+        min-width: 0;
+        padding: 24px 16px;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    .introduccion-preguntas-frecuentes h2,
+    .introduccion-preguntas-frecuentes p {
+        text-align: center;
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .buscador-preguntas-frecuentes {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .input-preguntas-frecuentes {
+        width: 100%;
+    }
+
+    .input-preguntas-frecuentes input {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .cards-preguntas-frecuentes {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 16px;
+        gap: 12px;
+        width: 100%;
+        max-width: 360px;
+        box-sizing: border-box;
     }
 
     .card-individual-preguntas-frecuentes {
-        width: 45%;
+        width: 100%;
     }
 
-
     .seccion-preguntas-frecuentes {
-        width: 90%;
+        width: 100%;
+        max-width: 360px;
         min-width: 0;
+        margin: 0 auto;
+        padding: 16px;
+        box-sizing: border-box;
     }
 
     .seccion-dudas {
         height: 100%;
-        padding: 40px;
+        padding: 40px 16px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .seccion-dudas p{
-width: 100%;
-text-align: center;
+    .seccion-dudas p {
+        width: 100%;
+        max-width: 360px;
+        text-align: center;
     }
 
     .cards-seccion-dudas {
         flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 360px;
     }
 
 
