@@ -1,0 +1,6 @@
+• Sitio web completo: todos los archivos HTML, CSS, imágenes y recursos multimedia
+• alumno.txt: mismos datos que la carátula del informe
+• Informe técnico: Word o PDF
+• Textos del sitio: Word o PDF (el anexo textual del informe)
+• Pantallas del diseño: JPG + archivo original (PSD, AI, Figma) si se realizaron
+• Esta consigna: incluida en el ZIP

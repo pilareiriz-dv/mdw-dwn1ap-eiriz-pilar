@@ -1,10 +1,11 @@
 • Escuela de Arte Multimedial Da Vinci
 • CARRERA: Diseño y Programación Web
 • MATERIA: Maquetado y Desarrollo Web
-• TRABAJO PRÁCTICO: Examen Parcial 2
+• TRABAJO PRÁCTICO: FINAL
 • PROFESOR: Carlos Ferrer
 • ALUMNO: Eiriz, Pilar
+• DNI: 42876339
 • CUATRIMESTRE: 1er Cuatrimestre
 • COMISIÓN: DWN1AP
 • TURNO: Noche
-• FECHA DE ENTREGA: 07/07/2026
+• FECHA DE ENTREGA: 17/07/2026
